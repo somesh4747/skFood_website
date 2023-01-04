@@ -356,9 +356,9 @@ header nav a {
   right: 15rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.386);
 }
-.right-lower {
+/* .right-lower {
   margin: 0rem 2rem;
-}
+} */
 
 @media only screen and (max-width: 500px) {
   .right-lower .big_img {
@@ -471,6 +471,95 @@ header nav a {
     padding-bottom: 15rem;
   }
 }
+
+/* ---------secton six----------- */
+
+
+
+.section-six{
+  display: flex;
+  flex-flow: column wrap;
+
+  justify-content: space-between;
+  align-items:center;
+ margin: 4rem 2rem;
+  
+}
+.section-six > p {
+  font-size: 5rem;
+  text-align: center;
+  font-weight: 600;
+}
+@media(min-width: 1000px){
+  .section-six > p {
+    margin: 0rem 15rem 3rem 15rem;
+
+  }
+
+
+}
+@media(min-width: 300px){
+  .section-six > p {
+    margin:  3rem 0rem;
+
+  }
+
+
+}
+
+.sec-six-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  row-gap: 2rem;
+  /* width: 100vw; */
+
+}
+.sec-six-inner-div{
+  /* border: 2px solid black; */
+  overflow: hidden;
+ height: 28rem;
+  max-width: 28rem;
+ 
+  
+
+
+
+}
+.sec-six-inner-div >  img{
+  width: 28rem;
+  height: 28rem;
+  object-fit: cover;
+
+}
+
+.circle{
+ border-radius: 50%;
+}
+.sec-only-text{
+  padding: 1.9rem ;
+}
+.sec-six-inner-div h3{
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 0.8rem;
+}
+.sec-six-inner-div p{
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  padding: 0.8rem;
+}
+
+
+.sec-six-inner-div > div{
+  font-size: 3rem;
+  font-weight: bold;
+  color: #868585;
+  padding: 0.8rem;
+}
+
+
 
 @media only screen and (max-width: 400px) {
   .left-middle-side {
