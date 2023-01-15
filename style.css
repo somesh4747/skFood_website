@@ -24,80 +24,133 @@ body {
 
 /*--------- header part--------- */
 
+header{
+
+  position: sticky;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.399);
+  display: block;
+  width: 100vw;
+  z-index: 10;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
 header nav {
   display: flex;
   flex-direction: row;
-  border: 2px solid var(--bgcolor);
+  /* border: 2px solid var(--bgcolor); */
   height: 10.5rem;
   padding: 0.7rem 3.5rem;
   justify-content: space-between;
 }
 
-header nav a {
+header nav > a {
   display: flex;
 }
 
+header nav > div {
+  display: flex;  
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 2.5rem;
+  min-width: 40vw;
+  
+}
+header nav > div a{
+  text-decoration: none;
+  color: black;
+  padding:0.8rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  /* background-color: var(--bgcolor); */
+
+}
+/* header nav > div a:hover{
+  color: rgb(129, 129, 129);
+} */
+@media only screen and (max-width:1000px){
+  header nav > div{
+    justify-content: space-around;
+  }
+
+
+}
+/* @media only screen and (min-height:105px){
+  header nav > div a{
+    color: black;
+  }
+} */
 /*--------- main part--------- */
 
+main{
+  display: block;
+}
 .section_one {
-  height: 130vh;
+  height: 768px;
   width: 100vw;
+  background: url('images/top.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--bgcolor);
 }
 .section_one::before {
   content: "";
   position: absolute;
-  background: url("images/top.jpg");
+  background: linear-gradient(90deg, rgba(0,0,0,1) 7%, rgba(0,212,255,0) 100%);
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   top: 10.5rem;
   left: 0px;
-  height: 100vh;
+  height: 768px;
   width: 100vw;
 
-  /* z-index: -1; */
+ 
 }
-.sec {
-  display: flex;
-  justify-content: center;
-  height: 779px;
-  /* margin-bottom: 3rem; */
+@media (max-width:450px){
+  .section_one::before{
+    height: 1079.7px;
+  }
+  
 }
 .top_card {
-  position: absolute;
+ 
 
-  background-color: var(--w_color);
-  /* height: 40rem; */
+ color: black;
+  height: 40rem;
   /* height: 50rem; */
   padding: 2rem 2rem;
   max-width: 68rem;
   border-radius: 4rem;
-  text-align: center;
+  /* text-align: center; */
 
   display: flex;
   flex-direction: column;
   gap: 2rem;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   margin: 0rem 2rem;
+  position: relative;
+  top: 200px;
+  z-index: 2;
 
-  top: 70vh;
-
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 3rem rgba(0, 0, 0, 0.5); */
 }
 
 .top_card h1 {
   font-size: 7rem;
-  color: var(--bgcolor);
+  color:var(--w_color);
   font-weight: bold;
 }
 .top_card p {
   font-size: 1.9rem;
   font-weight: 400;
+  color: var(--w_color);
 }
-
+.top_card span{
+  color: #f76c37;
+}
 #btn {
   text-decoration: none;
   font-size: 1.8rem;
